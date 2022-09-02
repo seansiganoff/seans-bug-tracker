@@ -2,6 +2,7 @@
 import './updateUser.css';
 import { useState, useRef } from 'react';
 import { onUpdateEmail, onUpdateUserPassword } from '../../api/auth';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -14,6 +15,7 @@ const UpdateUser = () => {
     const [errorMessage, setErrorMessage] = useState([])
     const [successMessage, setSuccessMessage] = useState('')
     const btnRef = useRef(null);
+    const navigate = useNavigate();
   
     //changes update options (email or password) and sets the UI inputs.
     const onChangeSelectUpdateOption = (e) => {
@@ -44,6 +46,9 @@ const UpdateUser = () => {
             setEmailInput({email: '', password: '', new_email: '', confirm_email: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
+            setTimeout(() => {
+                navigate('/dashboard/update-user')
+            }, 3000)
           
         }
         setTimeout(() => {
@@ -63,6 +68,9 @@ const UpdateUser = () => {
             setPasswordInput({email: '', password: '', new_password: '', confirm_password: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
+            setTimeout(() => {
+                navigate('/dashboard/update-user')
+            }, 3000)
         }
         setTimeout(() => {
             setErrorMessage('')
