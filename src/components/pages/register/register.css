@@ -1,0 +1,103 @@
+
+
+
+.register-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../photos/background9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: rgb(52, 52, 52);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.register-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(117, 117, 117, 0.712);
+    padding-top: 2rem;
+}
+
+.register-form {
+    width: 25rem;
+    border-radius: 20px;
+    padding: 3rem 0 4rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgb(121, 121, 121);
+}
+
+.register-input {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-input input {
+    padding: 4px;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.register-input h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.register-input button {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.register-container form {
+    width: 100%;
+}
+
+.register-error-message {
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.register-success-message {
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .register-form {
+        width: 85%;
+    }
+
+    .register-input h1 {
+        font-size: 12vw;
+    }
+
+    .register-input input {
+        font-size: 4vw;
+    }
+    .register-input button {
+        font-size: 3.5vw;
+    }
+}

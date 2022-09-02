@@ -1,0 +1,91 @@
+
+
+.newbug-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../photos/background9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.newbug-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.285);
+    padding: 0 0 3rem 0;
+}
+
+.newbug-overlay h1 {
+    word-spacing: 15px;
+    padding: 60px;
+    background-color: rgba(35, 75, 110, 0.847);
+    color: white;
+    border-bottom: rgb(0, 183, 255) solid 1px;
+    border-top: rgb(0, 183, 255) solid 1px;
+    margin: 0;
+}
+
+.newbug-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+
+.newbug-form select {
+    font-size: 1rem;
+    padding: 5px;
+    width: 70%;
+    margin: 10px 0px;
+}
+
+.newbug-form input {
+   width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.newbug-form button {
+    padding: 5px 20px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border-radius: 7px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.326);
+}
+
+.newbug-form button:active {
+    background-color: green;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    
+    .newbug-overlay h1 {
+        padding: 8.2vw;
+        font-size: 5.8vw;
+    }
+    
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .newbug-form select {
+        font-size: 3.5vw;
+    }
+    .newbug-form input {
+        font-size: 4vw;
+    }
+    .newbug-form button {
+        font-size: 3.3vw;
+    }
+}

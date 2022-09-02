@@ -1,0 +1,90 @@
+
+
+.newProject-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../photos/background9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newProject-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.285);
+    padding: 0 0 3rem 0;
+}
+
+.newProject-overlay h1 {
+    word-spacing: 15px;
+    padding: 60px;
+    background-color: rgba(35, 75, 110, 0.847);
+    color: white;
+    border-bottom: rgb(0, 183, 255) solid 1px;
+    border-top: rgb(0, 183, 255) solid 1px;
+    margin: 0;
+}
+
+
+
+.newProject-form {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.newProject-form button {
+    padding: 5px 20px;
+    border-radius: 7px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.326);
+}
+
+.newProject-form input {
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 1rem;
+    width: 50%;
+}
+
+button:active {
+    background-color: rgb(40, 172, 40);
+    
+  }
+
+  @media only screen and (max-width: 1050px) {
+    .newProject-form input {
+        width: 18rem;
+    }
+    .newProject-form {
+        width: 100%;
+    }
+}
+  @media only screen and (max-width: 700px) {
+    
+    .newProject-overlay h1 {
+        padding: 8.2vw;
+        font-size: 5.8vw;
+    }
+    
+
+}
+@media only screen and (max-width: 500px) {
+    
+    .newProject-form input {
+        width: 70vw;
+    }
+    
+    .newProject-form button {
+        font-size: 4vw;
+    }
+}

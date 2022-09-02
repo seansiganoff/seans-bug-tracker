@@ -1,0 +1,81 @@
+
+
+.updateUser-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../photos/background9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.updateUser-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.285);
+    padding: 0 0 3rem 0;
+}
+
+.updateUser-container select {
+    padding: 3px 10px;
+    font-size: 1.1rem;
+}
+
+.updateUser-form {
+    padding: 3rem 0;
+}
+
+.updateUser-overlay h1 {
+    word-spacing: 15px;
+    padding: 60px;
+    background-color: rgba(35, 75, 110, 0.847);
+    color: white;
+    border-bottom: rgb(0, 183, 255) solid 1px;
+    border-top: rgb(0, 183, 255) solid 1px;
+    margin: 0;
+}
+
+.updateUser-form input {
+    width: 50%;
+    padding: 5px;
+    font-size: 1rem;
+    margin: 5px auto;
+}
+
+.updateUser-form button {
+    padding: 5px 20px;
+    font-size: 1rem;
+    margin: 5px auto;
+    border-radius: 7px;
+}
+
+.updateUser-form button:active {
+    background-color: green;
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+    .updateUser-overlay h1 {
+        padding: 8.2vw;
+        font-size: 5.8vw;
+    }
+    
+
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .updateUser-container select {
+        font-size: 5vw;
+        padding: 10px 0;
+    }
+    
+
+}

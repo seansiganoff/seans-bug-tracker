@@ -1,0 +1,153 @@
+
+
+.viewBug-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../photos/background9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: rgb(52, 52, 52);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.viewBug-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(117, 117, 117, 0.712);
+    padding: 0 0 3rem 0;
+}
+
+.viewBug-h1-header h1 {
+    word-spacing: 15px;
+    background-color: rgba(35, 75, 110, 0.847);
+    color: white;
+    border-bottom: rgb(0, 183, 255) solid 1px;
+    border-top: rgb(0, 183, 255) solid 1px;
+    text-align: center;
+    margin: 0;
+    padding: 60px;
+}
+
+
+
+.viewBug-h1-projects {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0 0.5rem 0;
+    font-weight: 100;
+}
+
+.viewBug-h1-bugs {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.viewBug-select-project {
+    width: 80%;
+    margin: 0 auto 5rem auto;
+}
+
+.viewBug-select-project select {
+    width: 100%;
+    margin: 0;
+    padding: 4px 5px;
+    font-size: 1.1rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.326);
+}
+
+.viewBug-bugs-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+
+
+.viewBug-bug-div {
+    margin: 2rem 0;
+    padding: 30px 50px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.418);
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.404);
+    border-radius: 7px;
+}
+
+.viewBug-bug-div:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+
+.viewBug-bug-info-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    font-size: 1.5rem;
+    padding: 5px 0;
+    border-radius: 7px;
+}
+
+.viewBug-bug-info {
+    margin: 8px 0;
+    word-break: break-all;
+}
+
+span {
+    color: rgb(176, 176, 176);
+}
+
+@media only screen and (max-width: 1050px) {
+    .viewBug-h1-header h1 {
+        padding: 4vw 0;
+    }
+    .viewBug-bug-info-div {
+        display: grid;
+        text-align: center;
+    }
+    .viewBug-bug-div {
+        padding: 4.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .viewBug-select-project select {
+        font-size: 3.7vw;
+    }
+    .viewBug-bug-info-div {
+        font-size: 5vw;
+    }
+    .viewBug-bug-div {
+        font-size: 4vw;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .viewBug-h1-header h1 {
+        font-size: 8vw;
+    }
+    .viewBug-h1-projects {
+        font-size: 4.1vw;
+    }
+
+    .viewBug-h1-bugs {
+        font-size: 4.1vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .viewBug-bugs-container h4 {
+        font-size: 5vw;
+    }
+}
