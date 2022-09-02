@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './new-project.css'
 import { useState } from 'react';
 import { onNewProject } from '../../api/auth';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const NewProject = () => {
@@ -10,7 +10,7 @@ const NewProject = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('')
   const btnRef = useRef(null);
-
+  const navigate = useNavigate()
 
   const onChange = (e) => {
     setInput({...input, [e.target.name]: e.target.value})
