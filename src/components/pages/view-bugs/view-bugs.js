@@ -9,7 +9,6 @@ import './view-bugs.css'
 
 const ViewBug = () => {
   const [loading, setLoading] = useState(true)
-  const [protectedData, setProtectedData] = useState(null);
   const [project, setProject] = useState([{}])
   const [selectedProject, setSelectedProject] = useState([])
   const [bugs, setBugs] = useState([{}])
@@ -51,17 +50,7 @@ const ViewBug = () => {
       localStorage.removeItem('isAuth')
   }
 
-  const protectedInfo = async () => {
-    try {
-      const { data } = await fetchProtectedInfo()
-      setProtectedData(data.info)
-      setLoading(false)
-    } catch (error) {
-      logout()
-    }
-  }
-
-
+  
  
   const OnChangeSelectProject = (e) => {
     setSelectedProject(e.target.value)
@@ -82,9 +71,7 @@ const ViewBug = () => {
 
   
 
-  return loading ? (
-    <h1>Loading...</h1>
-  ) : (
+  return (
     ////////////////////////////////////////////////////////  View bug container and overlay div  ///////////////////////////////////////////
     <div className='viewBug-container'>
       <div className='viewBug-overlay'>
