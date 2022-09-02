@@ -1,5 +1,5 @@
 const db = require('../db');
-const {hash, compare} = require('bcrypt')
+const {hash, compare} = require('bcryptjs')
 const {sign} = require('jsonwebtoken');
 const {SECRET} = require('../constants');
 
