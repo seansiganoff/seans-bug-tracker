@@ -50,7 +50,7 @@ const UpdateUser = () => {
           
         }
         setTimeout(() => {
-            navigate('/dashboard/update-user')
+            navigate('/dashboard')
         }, 3000)
     }
 
@@ -67,7 +67,7 @@ const UpdateUser = () => {
             setErrorMessage(error.response.data.errors[0].msg)
         }
         setTimeout(() => {
-            navigate('/dashboard/update-user')
+            navigate('/dashboard')
         }, 3000)
     }
 

@@ -28,9 +28,7 @@ const NewBug = ({userInfo}) => {
             const {data} = await onNewBug(input)
             setSuccessMessage(data.message)
             setErrorMessage('')
-            setTimeout(() => {
-                navigate('/dashboard/new-bug')
-            })
+            setInput({project_name: '', location: '', description: '', assigned_to: userInfo[0].first_name + ' ' + userInfo[0].last_name})
         } catch (error) {
             setErrorMessage(error.response.data[0].message)
             
@@ -38,6 +36,7 @@ const NewBug = ({userInfo}) => {
         setTimeout(() => {
             setErrorMessage('')
             setSuccessMessage('')
+            navigate('/dashboard')
         }, 3000)
     }
 

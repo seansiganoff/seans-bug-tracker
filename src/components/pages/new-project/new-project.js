@@ -32,6 +32,7 @@ const onSubmit = async (e) => {
       btnRef.current.disabled = false;
       setErrorMessage('')
       setSuccessMessage('')
+      navigate('/dashboard')
   }, 3000)
   
 }

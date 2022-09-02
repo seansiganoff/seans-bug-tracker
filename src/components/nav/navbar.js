@@ -32,7 +32,7 @@ const Navbar = ({userInfo}) => {
         return (
               <div className='navbar-container1'>
                   <div className='nav-left-side'>
-                    <NavLink to="/dashboard/">
+                    <NavLink to="/dashboard">
                       <h1>DASHBOARD</h1>
                     </NavLink>
                   </div>
