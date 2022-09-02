@@ -41,7 +41,7 @@ const UpdateUser = () => {
             const {data} = await onUpdateEmail(emailInput)
             setSuccessMessage(data.message);
             setErrorMessage('')
-            
+            setEmailInput({email: '', password: '', new_email: '', confirm_email: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
           
@@ -60,7 +60,7 @@ const UpdateUser = () => {
             const {data} = await onUpdateUserPassword(passwordInput)
             setSuccessMessage(data.message);
             setErrorMessage('')
-            
+            setPasswordInput({email: '', password: '', new_password: '', confirm_password: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
         }

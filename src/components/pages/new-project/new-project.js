@@ -24,6 +24,7 @@ const onSubmit = async (e) => {
         const {data} = await onNewProject(input)
         setSuccessMessage(data.message);
         setErrorMessage('')
+        setInput({project_name: '', url: ''})
     } catch (err) {
       setErrorMessage(err.response.data[0].message)
     }
