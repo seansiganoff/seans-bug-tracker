@@ -109,6 +109,7 @@ const UpdateBug = ({userInfo}) => {
             if(data) {
                 setErrorMessage('')
                 setSuccessMessage('This bug has been deleted!');
+                navigate('/dashboard')
             }
         } catch (error) {
             console.error(error.message)
