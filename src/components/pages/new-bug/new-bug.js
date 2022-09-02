@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import './new-bug.css';
 import { useState } from 'react';
 import { onNewBug } from '../../api/auth';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const NewBug = ({userInfo}) => {
     const [errorMessage, setErrorMessage] = useState('')
@@ -11,7 +14,7 @@ const NewBug = ({userInfo}) => {
     const [selectProjectValue, setSelectProjectValue] = useState("default")
     const [input, setInput] = useState({project_name: '', location: '', description: '', assigned_to: userInfo[0].first_name + ' ' + userInfo[0].last_name})
     const btnRef = useRef(null);
-
+    const navigate = useNavigate();
 
 
     const onChangeInput = (e) => {
@@ -25,7 +28,9 @@ const NewBug = ({userInfo}) => {
             const {data} = await onNewBug(input)
             setSuccessMessage(data.message)
             setErrorMessage('')
-            setInput({project_name: '', location: '', description: '', assigned_to: userInfo[0].first_name + ' ' + userInfo[0].last_name})
+            setTimeout(() => {
+                navigate('/dashboard/new-bug')
+            })
         } catch (error) {
             setErrorMessage(error.response.data[0].message)
             

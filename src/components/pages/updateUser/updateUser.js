@@ -46,14 +46,11 @@ const UpdateUser = () => {
             setEmailInput({email: '', password: '', new_email: '', confirm_email: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
-            setTimeout(() => {
-                navigate('/dashboard/update-user')
-            }, 3000)
+            
           
         }
         setTimeout(() => {
-            setErrorMessage('')
-            setSuccessMessage('')
+            navigate('/dashboard/update-user')
         }, 3000)
     }
 
@@ -68,13 +65,9 @@ const UpdateUser = () => {
             setPasswordInput({email: '', password: '', new_password: '', confirm_password: ''})
         } catch (error) {
             setErrorMessage(error.response.data.errors[0].msg)
-            setTimeout(() => {
-                navigate('/dashboard/update-user')
-            }, 3000)
         }
         setTimeout(() => {
-            setErrorMessage('')
-            setSuccessMessage('')
+            navigate('/dashboard/update-user')
         }, 3000)
     }
 
