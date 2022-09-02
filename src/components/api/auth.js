@@ -10,7 +10,7 @@ export async function onGetBugComments() {
 
 
 export async function onGetUsers() {
-    return await axios.get('https://seans-bug-tracker.herokuapp.com/api/dashboard/get-users')
+    return await axios.get('api/dashboard/get-users')
 }
 
 export async function onLogout() {

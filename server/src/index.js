@@ -24,11 +24,6 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.get('/', (req, res) => {
-    res.json("Hello Sean!")
-})
-
-
 
 
 app.listen(PORT, () => {
