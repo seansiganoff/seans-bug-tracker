@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { fetchProtectedInfo, onLogout } from '../../api/auth'
-import { unauthenticateUser } from '../../../redux/slices/authSlice'
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import './view-bugs.css'
+import './view-bugs.css';
 
 
 const ViewBug = () => {
-  const [loading, setLoading] = useState(true)
   const [project, setProject] = useState([{}])
   const [selectedProject, setSelectedProject] = useState([])
   const [bugs, setBugs] = useState([{}])
@@ -41,14 +38,6 @@ const ViewBug = () => {
     setFilteredBugs(bugs.filter((data) => data.project_name === selectedProject));
   }
   
-  
-
-  const logout = async () => {
-      await onLogout()
-      localStorage.removeItem('userInfo')
-      dispatch(unauthenticateUser())
-      localStorage.removeItem('isAuth')
-  }
 
   
  
@@ -57,7 +46,6 @@ const ViewBug = () => {
   }
   
   useEffect(() => {
-    protectedInfo()
     fetchProjects()
     fetchBugs();
   }, [])
