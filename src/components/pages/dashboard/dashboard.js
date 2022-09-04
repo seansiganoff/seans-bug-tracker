@@ -11,33 +11,33 @@ const Dashboard = () => {
         <h1>DASHBOARD</h1>
 
         <div className='dashboard-btn-container'>
-          <div>
+          <div className='dashboard-btn'>
             <Link to="/dashboard/update-project">
-              <button className='dashboard-btn'>View projects</button>
+              <button>View projects</button>
             </Link>
           </div>
 
-          <div>
+          <div className='dashboard-btn'>
           <Link to="/dashboard/new-project">
-            <button className='dashboard-btn'>Create a new project</button>
+            <button>Create a new project</button>
           </Link>
           </div>
 
-          <div>
+          <div className='dashboard-btn'>
             <Link to="/dashboard/view-bugs">
-              <button className='dashboard-btn'>View bugs</button>
+              <button>View bugs</button>
             </Link>
           </div>
 
-          <div>
+          <div className='dashboard-btn'>
             <Link to="/dashboard/new-bug">
-              <button className='dashboard-btn'>Create a new bug</button>
+              <button>Create a new bug</button>
             </Link>
           </div>
           
-          <div>
+          <div className='dashboard-btn'>
             <Link to="/dashboard/update-user">
-              <button className='dashboard-btn'>Update user info</button>
+              <button>Update user info</button>
             </Link>
           </div>
         </div>

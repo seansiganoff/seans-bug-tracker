@@ -32,19 +32,24 @@
 }
 
 .dashboard-btn-container {
-    width: 100%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    flex-direction: column;
+    background-color: aliceblue;
+    padding: 0 30px;
+    text-align: center;
     gap: 5px;
 }
 
+.dashboard-btn  {
+    width: 19%;
+}
+
 .dashboard-btn button {
-    width: 18%;
-    padding: 5px 10%;
-    background-color: azure;
+    width: 100%;
 }
 
 .dashboard-btn button:hover {
