@@ -31,24 +31,28 @@
     margin: 0;
 }
 
-.dashboard-container button {
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin: 30px 10px;
-    border-radius: 20px;
+.dashboard-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.dashboard-container button:hover {
+.dashboard-btn {
+    width: 18%;
+    padding: 5px 0;
+}
+
+.dashboard-btn button:hover {
     background-color: rgb(0, 183, 255);
 }
 
 
-.dashboard-links-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+
+
 
 @media only screen and (max-width: 500px) {
     .dashboard-container h1 {
