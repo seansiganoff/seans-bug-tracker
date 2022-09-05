@@ -40,11 +40,11 @@
     flex-wrap: wrap;
     padding: 0 30px;
     text-align: center;
-    gap: 5px;
 }
 
 .dashboard-btn  {
     width: 19%;
+    margin: 5px;
 }
 
 .dashboard-btn button {
@@ -77,3 +77,10 @@
         font-size: 5vw;
     }
 }
+
+@media only screen and (max-width: 350px) {
+  
+    .dashboard-btn button {
+      font-size: 5vw;
+    }
+  }
