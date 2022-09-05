@@ -44,12 +44,13 @@
 
 .dashboard-btn  {
     width: 19%;
-    margin: 5px;
+    margin: 10px;
 }
 
 .dashboard-btn button {
     width: 100%;
     padding: 20px 0;
+    font-size: 1.4vw;
 }
 
 .dashboard-btn button:hover {
@@ -63,6 +64,7 @@
     }
     .dashboard-btn {
       width: 90%;
+      font-size: 5vw;
     }
   }
 
@@ -78,9 +80,3 @@
     }
 }
 
-@media only screen and (max-width: 350px) {
-  
-    .dashboard-btn button {
-      font-size: 5vw;
-    }
-  }
