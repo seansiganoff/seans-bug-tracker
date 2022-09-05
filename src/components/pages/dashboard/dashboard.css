@@ -78,6 +78,7 @@
     }
     .dashboard-btn-container {
         padding: 15px 0;
+        flex-direction: row;
     }
     
 }
