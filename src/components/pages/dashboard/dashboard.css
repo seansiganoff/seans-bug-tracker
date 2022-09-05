@@ -38,7 +38,6 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: aliceblue;
     padding: 0 30px;
     text-align: center;
     gap: 5px;
@@ -58,7 +57,14 @@
 }
 
 
-
+@media only screen and (max-width: 1000px) {
+    .dashboard-btn-container {
+      flex-direction: column;
+    }
+    .dashboard-btn {
+      width: 90%;
+    }
+  }
 
 
 @media only screen and (max-width: 500px) {
