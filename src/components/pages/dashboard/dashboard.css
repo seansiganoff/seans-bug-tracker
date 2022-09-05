@@ -76,7 +76,9 @@
         padding: 12vw 0;
         font-size: 8vw;
     }
-
+    .dashboard-btn-container {
+        padding: 15px 0;
+    }
     
 }
 
