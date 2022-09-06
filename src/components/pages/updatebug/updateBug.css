@@ -56,6 +56,10 @@
     border-radius: 7px;
 }
 
+.update-bug-list input {
+    width: 90%;
+}
+
 .update-bug-comments-container {
     border: solid black 1px;
     padding: 20px;
