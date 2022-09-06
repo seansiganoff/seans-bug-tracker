@@ -24,9 +24,26 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.use('/*', (req, res) => {
+app.use('/dashboard', (req, res) => {
     res.redirect('/dashboard');
 })
+
+app.use('/view-bugs', (req, res) => {
+    res.redirect('/view-bugs');
+})
+
+app.use('/new-project', (req, res) => {
+    res.redirect('/new-project');
+})
+
+app.use('/new-bug', (req, res) => {
+    res.redirect('/new-bug');
+})
+
+app.use('/update-user', (req, res) => {
+    res.redirect('/update-user');
+})
+
 
 app.listen(PORT, () => {
     console.log(`The app is running on port ${PORT}`)
