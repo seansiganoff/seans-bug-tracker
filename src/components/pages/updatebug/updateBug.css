@@ -92,9 +92,9 @@
  .update-bug-div-banner {
     padding: 10px;
     display: grid;
-    width: 0%;
+    width: 100%;
  }   
  .update-bug-div {
-    width: 0%;
+    width: 1000%;
  }
 }
