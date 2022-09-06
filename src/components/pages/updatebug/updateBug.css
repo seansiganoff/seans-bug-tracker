@@ -83,3 +83,15 @@
     border-radius: 7px;
     margin: 10px 0;
 }
+
+
+@media only screen and (max-width: 1200px) {
+ .update-bug-div-banner {
+    padding: 10px;
+    display: grid;
+    width: 0%;
+ }   
+ .update-bug-div {
+    width: 0%;
+ }
+}
