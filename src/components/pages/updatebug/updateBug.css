@@ -95,3 +95,27 @@
  
 }
 
+@media only screen and (max-width: 800px) {
+    .update-bug-comments-container {
+        display: grid;
+    }
+ 
+}
+
+@media only screen and (max-width: 500px) {
+    .update-bug-div-banner {
+        font-size: 5vw;
+    }
+    .update-bug-div {
+        font-size: 4.5vw;
+    }
+    .update-bug-delete-btn {
+        font-size: 4vw;
+    }
+    .update-bug-list button {
+        font-size: 4vw;
+    }
+ 
+}
+
+
