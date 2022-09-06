@@ -24,7 +24,7 @@
 .update-bug-div {
     width: 80%;
     margin: 1rem auto;
-    padding: 40px;
+    padding: 4%;
     font-size: 1.2rem;
     color: white;
     border-radius: 7px;
@@ -90,11 +90,17 @@
 
 @media only screen and (max-width: 1200px) {
  .update-bug-div-banner {
-    padding: 10px;
+    padding: 10px 0;
     display: grid;
     width: 100%;
  }   
  .update-bug-div {
     width: 100%;
  }
+}
+
+@media only screen and (max-width: 500px) {
+    .update-bug-div-banner {
+        padding: 10px 5px;
+    }
 }
