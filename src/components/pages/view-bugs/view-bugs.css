@@ -113,10 +113,13 @@ span {
     }
     .viewBug-bug-info-div {
         display: grid;
-        text-align: center;
     }
     .viewBug-bug-div {
         padding: 4.5vw;
+    }
+    .viewBug-bug-info-id {
+        padding: 10px;
+        margin: 10px 0;
     }
 }
 
