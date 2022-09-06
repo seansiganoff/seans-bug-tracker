@@ -24,7 +24,9 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-
+app.use('*', (req, res) => {
+    res.redirect('/dashboard');
+})
 
 app.listen(PORT, () => {
     console.log(`The app is running on port ${PORT}`)
