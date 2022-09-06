@@ -157,7 +157,6 @@ const UpdateBug = ({userInfo}) => {
                                     onChange={(e) => onChangeInput(e)}
                                     value={input.comment}
                                     required
-                                    style={{width: '100%', height: '4vh', textAlign: 'left'}}
                                 /> 
                                 <div><button type="submit">Add Comment</button></div>
                             </form>
