@@ -93,10 +93,10 @@ const ViewBug = () => {
                 <Link to="/dashboard/view-bugs/update-bug" key={i} state={{getBug: bug}}>
                   <div className='viewBug-bug-div' key={i}>
                     <div className='viewBug-bug-info-div'>
-                      <div>
+                      <div className='viewBug-bug-info-id'>
                         <span style={{color: 'black'}}>Project Name:</span> {bug.project_name}
                       </div>
-                      <div>
+                      <div className='viewBug-bug-info-id'>
                         <span style={{color: 'black'}}>Bug ID:</span> {bug.bug_id}
                       </div>
                     </div>

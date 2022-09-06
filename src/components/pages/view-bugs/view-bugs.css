@@ -113,6 +113,7 @@ span {
     }
     .viewBug-bug-info-div {
         display: grid;
+        justify-content: left;
     }
     .viewBug-bug-div {
         padding: 4.5vw;
