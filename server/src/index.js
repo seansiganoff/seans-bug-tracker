@@ -24,10 +24,13 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.get('https://seans-bug-tracker.herokuapp.com/*', (req, res) => {
-    res.redirect('/dashboard');
-});
-
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../public/index.html'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
+  })
 
 
 app.listen(PORT, () => {
