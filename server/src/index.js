@@ -24,7 +24,7 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 //
-app.get('/*', function(req, res) {
+app.get('/api/*', function(req, res) {
     res.sendFile(path.join(__dirname, '../../build'), function(err) {
       if (err) {
         res.status(500).send(err)
