@@ -25,7 +25,7 @@ app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../../src/App.js'), function(err) {
+    res.sendFile(path.join(__dirname, '../../src/index.js'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
