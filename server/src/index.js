@@ -24,9 +24,9 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.get('/*', (req, res) => {
+app.get('https://seans-bug-tracker.herokuapp.com/*', (req, res) => {
     res.redirect('/dashboard');
-})
+});
 
 
 
