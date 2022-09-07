@@ -23,7 +23,7 @@ app.use(passport.initialize());
 app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
-//
+//when the refresh button is hit, the page will show an error. this will refresh the current page.
 app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, '../../build/index.html'), function(err) {
       if (err) {
