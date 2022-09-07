@@ -24,25 +24,10 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.get('/dashboard', (req, res) => {
+app.get('*', (req, res) => {
     res.redirect('/dashboard');
 })
 
-app.get('/view-bugs', (req, res) => {
-    res.redirect('/view-bugs');
-})
-
-app.get('/new-project', (req, res) => {
-    res.redirect('/new-project');
-})
-
-app.get('/new-bug', (req, res) => {
-    res.redirect('/new-bug');
-})
-
-app.get('/update-user', (req, res) => {
-    res.redirect('/update-user');
-})
 
 
 app.listen(PORT, () => {
