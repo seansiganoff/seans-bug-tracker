@@ -24,23 +24,23 @@ app.use('/api', authRoutes)
 app.use(express.static(path.resolve(__dirname, "../../build")))
 
 
-app.use('/dashboard', (req, res) => {
+app.get('/dashboard', (req, res) => {
     res.redirect('/dashboard');
 })
 
-app.use('/view-bugs', (req, res) => {
+app.get('/view-bugs', (req, res) => {
     res.redirect('/view-bugs');
 })
 
-app.use('/new-project', (req, res) => {
+app.get('/new-project', (req, res) => {
     res.redirect('/new-project');
 })
 
-app.use('/new-bug', (req, res) => {
+app.get('/new-bug', (req, res) => {
     res.redirect('/new-bug');
 })
 
-app.use('/update-user', (req, res) => {
+app.get('/update-user', (req, res) => {
     res.redirect('/update-user');
 })
 
