@@ -1,49 +1,125 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './dashboard.css';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Banner from '../../banner/Banner';
+
+
+
 
 
 const Dashboard = () => {
+  const [project, setProject] = useState([{}])
+  const [selectedProject, setSelectedProject] = useState([])
+  const [bugs, setBugs] = useState([{}])
+  const [selectValue, setSelectValue] = useState("default");
+  const [filteredBugs, setFilteredBugs] = useState([]);
+
+  const dispatch = useDispatch()
+  
+
+
+
+  const fetchProjects = async () => {
+    await fetch('https://seans-bug-tracker.herokuapp.com/api/get-projects')
+          .then(res => res.json())
+          .then(data => {
+            setProject(data)
+          })    
+  }
+
+  const fetchBugs = async () => {
+    await fetch('https://seans-bug-tracker.herokuapp.com/api/get-bugs')
+    .then(res => res.json())
+    .then(data => {
+      setBugs(data);
+    }) 
+  }
+
+
+  const getBugsByID = () => {
+    setFilteredBugs(bugs.filter((data) => data.project_name === selectedProject));
+  }
+  
+
+  
+ 
+  const OnChangeSelectProject = (e) => {
+    setSelectedProject(e.target.value)
+  }
+  
+  useEffect(() => {
+    fetchProjects()
+    fetchBugs();
+  }, [])
+
+
+  
+  
+  useEffect(() => {
+    getBugsByID();
+  }, [selectedProject])
+
+  
+
   return (
-
     <div className='dashboard-container'>
-      <div className='dashboard-overlay'>
-        <h1>DASHBOARD</h1>
+      
+      {Banner('DASHBOARD')}
 
-        <div className='dashboard-btn-container'>
-          <div className='dashboard-btn'>
-            <Link to="/dashboard/update-project">
-              <button>View projects</button>
-            </Link>
-          </div>
 
-          <div className='dashboard-btn'>
-          <Link to="/dashboard/new-project">
-            <button>Create a new project</button>
-          </Link>
-          </div>
-
-          <div className='dashboard-btn'>
-            <Link to="/dashboard/view-bugs">
-              <button>View bugs</button>
-            </Link>
-          </div>
-
-          <div className='dashboard-btn'>
-            <Link to="/dashboard/new-bug">
-              <button>Create a new bug</button>
-            </Link>
-          </div>
+      {/* ////////////////////////////////////////////////////////  View bug container and overlay div  /////////////////////////////////////////// */}
+      <div className='viewBug-container'>
+        <div className='viewBug-overlay'>
           
-          <div className='dashboard-btn'>
-            <Link to="/dashboard/update-user">
-              <button>Update user info</button>
-            </Link>
+          
+          {/* ///////////////////////////////////////////////   Select project  //////////////////////////////////////////////////////////////// */}
+          <div className='viewBug-h1-projects'>
+            <h1>Select a project to view bugs</h1>
           </div>
+          <div className='viewBug-select-project'>
+            <form onChange={OnChangeSelectProject}>
+              <select defaultValue={selectValue} onChange={(e) => setSelectValue(e.target.value)}>
+                <option disabled hidden value='default'>Select Project</option>
+                {project.map((data, i) => <option key={i} value={data.project_name}>Project Name: {data.project_name}   |   Project ID: {data.id}  </option>)}
+              </select>
+            </form>
+          </div>
+
+
+
+          {/* //////////////////////////////////////////////////////////  Bugs display  /////////////////////////////////////////////////////////*/}
+          <div className='viewBug-h1-bugs'>
+              {/* ////////////////// ternary operator to determine how many bugs are being displayed ///////////////////// */}
+              {selectedProject.length > 0 ? filteredBugs.length > 0 ? filteredBugs.length < 2 ? <h1>This project has {filteredBugs.length} Bug.</h1> : <h1>This project has {filteredBugs.length} bugs</h1> : <h1>This project doesn't have any bugs</h1> : 'Select project to display bugs'}
+          </div>
+          <div className='viewBug-bugs-container'>
+            {filteredBugs.length > 0 ? <h4>Click on a bug to view</h4> : ''}
+                {filteredBugs.map((bug, i) => (
+                  <Link to="/dashboard/view-bugs/update-bug" key={i} state={{getBug: bug}}>
+                    <div className='viewBug-bug-div' key={i}>
+                      <div className='viewBug-bug-info-div'>
+                        <div className='viewBug-bug-info-id'>
+                          <span style={{color: 'black'}}>Project Name:</span> {bug.project_name}
+                        </div>
+                        <div className='viewBug-bug-info-id'>
+                          <span style={{color: 'black'}}>Bug ID:</span> {bug.bug_id}
+                        </div>
+                      </div>
+                      <div className='viewBug-bug-info'><span>Created By:</span> {bug.assigned_to}</div>
+                      <div className='viewBug-bug-info'><span>Location:</span> {bug.location}</div>
+                      <div className='viewBug-bug-info'><span>Description:</span> {bug.description}</div>
+                    </div>
+                  </Link>
+                ))}
+          </div>  
         </div>
       </div>
     </div>
   )
+
+
 }
 
 export default Dashboard

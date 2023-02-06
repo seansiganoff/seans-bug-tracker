@@ -3,7 +3,7 @@ import './updateUser.css';
 import { useState, useRef } from 'react';
 import { onUpdateEmail, onUpdateUserPassword } from '../../api/auth';
 import { useNavigate } from 'react-router-dom';
-
+import Banner from '../../banner/Banner';
 
 
 
@@ -76,7 +76,7 @@ const UpdateUser = () => {
   return (
     <div className='updateUser-container'>
         <div className='updateUser-overlay'>
-            <h1>UPDATE USER</h1>
+            {Banner('UPDATE USER INFORMATION')}
             
             <div className='updateUser-form'>
                 {/* Select update options */}

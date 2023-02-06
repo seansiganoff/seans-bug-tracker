@@ -1,7 +1,7 @@
 
 
 
-.dashboard-container {
+.viewBug-container {
     width: 100%;
     min-height: 100vh;
     background-image: url('../../photos/background9.jpg');
@@ -12,74 +12,147 @@
     display: block;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    color: rgb(52, 52, 52);
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
-.dashboard-overlay {
+.viewBug-overlay {
     width: 100%;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.285);
     padding: 0 0 3rem 0;
 }
 
-.dashboard-container h1 {
-    word-spacing: 15px;
-    padding: 60px;
-    background-color: rgba(35, 75, 110, 0.847);
-    color: white;
-    border-bottom: rgb(0, 183, 255) solid 1px;
-    border-top: rgb(0, 183, 255) solid 1px;
-    margin: 0;
+
+
+h1 {
+    padding: 0;
+    margin-top: 0;
 }
 
-.dashboard-btn-container {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 30px;
-    text-align: center;
+button {
+    padding: 10px;
+    width: 25rem;
+
 }
 
-.dashboard-btn  {
-    width: 17%;
-    margin: 10px;
+
+.viewBug-h1-projects {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0 0.5rem 0;
+    font-weight: 100;
 }
 
-.dashboard-btn button {
+.viewBug-h1-bugs {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.viewBug-select-project {
+    width: 80%;
+    margin: 0 auto 5rem auto;
+}
+
+.viewBug-select-project select {
     width: 100%;
-    padding: 20px 0;
-    font-size: 1.4vw;
+    margin: 0;
+    padding: 4px 5px;
+    font-size: 1.1rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.326);
 }
 
-.dashboard-btn button:hover {
+.viewBug-bugs-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+
+
+.viewBug-bug-div {
+    margin: 2rem 0;
+    padding: 30px 50px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.418);
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.404);
+    border-radius: 7px;
+}
+
+.viewBug-bug-div:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+
+.viewBug-bug-info-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
     background-color: rgb(0, 183, 255);
+    font-size: 1.5rem;
+    padding: 5px 0;
+    border-radius: 7px;
 }
 
+.viewBug-bug-info {
+    margin: 8px 0;
+    word-break: break-all;
+}
 
-@media only screen and (max-width: 1000px) {
-    .dashboard-btn-container {
-      flex-direction: column;
-    }
-    .dashboard-btn {
-      width: 90%;
-    }
-    .dashboard-btn button {
-        font-size: 5.1vw;
-    }
-  }
+span {
+    color: rgb(176, 176, 176);
+}
 
-
-@media only screen and (max-width: 500px) {
-    .dashboard-container h1 {
-        padding: 12vw 0;
-        font-size: 8vw;
+@media only screen and (max-width: 1150px) {
+    .viewBug-h1-header {
+        padding: 4vw 0;
     }
-    .dashboard-btn-container {
-        padding: 15px 0;
-        flex-direction: row;
+    .viewBug-bug-info-div {
+        display: grid;
+        justify-content: left;
+    }
+    .viewBug-bug-div {
+        padding: 4.5vw;
+    }
+    .viewBug-bug-info-id {
+        padding: 10px 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .viewBug-select-project select {
+        font-size: 3.7vw;
+    }
+    .viewBug-bug-info-div {
+        font-size: 5vw;
+    }
+    .viewBug-bug-div {
+        font-size: 4vw;
     }
     
 }
 
+@media only screen and (max-width: 500px) {
+    .viewBug-h1-header {
+        font-size: 8vw;
+    }
+    .viewBug-h1-projects {
+        font-size: 4.1vw;
+    }
+
+    .viewBug-h1-bugs {
+        font-size: 4.1vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .viewBug-bugs-container h4 {
+        font-size: 5vw;
+    }
+}

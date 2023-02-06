@@ -4,7 +4,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { onAddBugComment, onDeleteComment, onRemoveBug} from '../../api/auth';
 import Modal from '../../modal/modal';
 
-
 const UpdateBug = ({userInfo}) => {
     //Grabs the bug info from the last page
     const location = useLocation();
@@ -129,7 +128,6 @@ const UpdateBug = ({userInfo}) => {
   return (
     <div className='update-bug-container'>
         <div className='update-bug-overlay'>
-
         {/* //////////////////////////////////////////// Modal for delete button ////////////////////////////////////////////////////// */}
         {openModal && <Modal setOpenModal={setOpenModal} idOfItemToDelete={idOfItemToDelete} setIdOfItemToDelete={setIdOfItemToDelete} deleteComment={deleteComment} removeBug={removeBug} item={item}/>}
             

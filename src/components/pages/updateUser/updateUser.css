@@ -31,15 +31,7 @@
     padding: 3rem 0;
 }
 
-.updateUser-overlay h1 {
-    word-spacing: 15px;
-    padding: 60px;
-    background-color: rgba(35, 75, 110, 0.847);
-    color: white;
-    border-bottom: rgb(0, 183, 255) solid 1px;
-    border-top: rgb(0, 183, 255) solid 1px;
-    margin: 0;
-}
+
 
 .updateUser-form input {
     width: 50%;

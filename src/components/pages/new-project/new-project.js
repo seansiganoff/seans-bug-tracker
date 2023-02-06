@@ -3,7 +3,7 @@ import './new-project.css'
 import { useState } from 'react';
 import { onNewProject } from '../../api/auth';
 import { useNavigate } from 'react-router-dom';
-
+import Banner from '../../banner/Banner';
 
 const NewProject = () => {
   const [input, setInput] = useState({project_name: '', url: ''})
@@ -39,7 +39,7 @@ const onSubmit = async (e) => {
   return (
     <div className='newProject-container'>
       <div className='newProject-overlay'>
-        <h1>CREATE NEW PROJECT</h1>
+          {Banner('CREATE A NEW PROJECT')}
         <div className='newProject-form'>
             <form type="submit" onSubmit={onSubmit}>
               <div>

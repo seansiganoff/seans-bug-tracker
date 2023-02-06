@@ -32,9 +32,36 @@ const Navbar = ({userInfo}) => {
         return (
               <div className='navbar-container1'>
                   <div className='nav-left-side'>
-                    <NavLink to="/dashboard">
-                      <h1>DASHBOARD</h1>
-                    </NavLink>
+                    <ul>
+                        <li>
+                          <NavLink to="/dashboard">
+                            DASHBOARD
+                          </NavLink>
+                        </li>
+                        <li>
+                        <NavLink to="/dashboard/new-project">
+                            NEW PROJECT
+                          </NavLink>
+                        </li>
+                        <li>
+                        <NavLink to="/dashboard/new-bug">
+                            NEW BUG
+                          </NavLink>
+                        </li>
+                        <li>
+                        <NavLink to="/dashboard/update-user">
+                            UPDATE USER
+                          </NavLink>
+                        </li>
+                       
+                        
+
+                    </ul>
+                    
+                    
+                    
+                      
+
                   </div>
                   <div className='nav-right-side'>
                        <div className='userName'><div>Logged in as <span style={{color: 'rgb(0, 183, 255)'}}>{userInfo[0].first_name} {userInfo[0].last_name}</span></div></div>
@@ -68,7 +95,7 @@ const Navbar = ({userInfo}) => {
 
   return (
     <div className='navbar'>
-            {isAuth ? VerifiedNav() : UnverifiedNav()}
+            {isAuth ? VerifiedNav() : VerifiedNav()}
     </div>
   )
 }

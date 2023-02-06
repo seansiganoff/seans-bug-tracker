@@ -22,7 +22,7 @@
     padding: 0 0 3rem 0;
 }
 
-.viewBug-h1-header h1 {
+/* .viewBug-h1-header h1 {
     word-spacing: 15px;
     background-color: rgba(35, 75, 110, 0.847);
     color: white;
@@ -31,7 +31,7 @@
     text-align: center;
     margin: 0;
     padding: 60px;
-}
+} */
 
 
 
@@ -108,9 +108,9 @@ span {
 }
 
 @media only screen and (max-width: 1150px) {
-    .viewBug-h1-header h1 {
+    /* .viewBug-h1-header h1 {
         padding: 4vw 0;
-    }
+    } */
     .viewBug-bug-info-div {
         display: grid;
         justify-content: left;
@@ -137,9 +137,9 @@ span {
 }
 
 @media only screen and (max-width: 500px) {
-    .viewBug-h1-header h1 {
+    /* .viewBug-h1-header h1 {
         font-size: 8vw;
-    }
+    } */
     .viewBug-h1-projects {
         font-size: 4.1vw;
     }

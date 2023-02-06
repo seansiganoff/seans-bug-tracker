@@ -3,7 +3,7 @@ import './new-bug.css';
 import { useState } from 'react';
 import { onNewBug } from '../../api/auth';
 import { useNavigate } from 'react-router-dom';
-
+import Banner from '../../banner/Banner';
 
 
 const NewBug = ({userInfo}) => {
@@ -82,7 +82,7 @@ const NewBug = ({userInfo}) => {
   return (
     <div className='newbug-container'>
         <div className='newbug-overlay'>
-            <h1>CREATE NEW BUG</h1>
+            {Banner('CREATE A NEW BUG')}
             <div className='newbug-form'>
                 <form onChange={OnChangeSelectProject}>
                     <select defaultValue={selectProjectValue} onChange={(e) => setSelectProjectValue(e.target.value)}>
