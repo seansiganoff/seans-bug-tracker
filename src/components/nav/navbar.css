@@ -140,15 +140,21 @@ a:visited {
     li a {
         font-size: xx-small;
     }
-}
-
-@media only screen and (max-width: 900px) {
-    
 
     .nav-logout-btn {
         padding: 5px 15px;
         font-size: xx-small;
     }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar-container1 {
+        display: grid;
+        padding: 15px 0;
+        justify-content: center;
+    }
+
+    
 
     .nav-right-side {
         justify-content: center;
@@ -156,11 +162,7 @@ a:visited {
 }
 
 @media only screen and (max-width: 750px) {
-    .navbar-container1 {
-        display: grid;
-        padding: 15px 0;
-        justify-content: center;
-    }
+    
     .nav-left-side {
         padding: 0 0 15px 0;        
     }
