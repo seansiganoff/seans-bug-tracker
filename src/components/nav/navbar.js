@@ -64,7 +64,7 @@ const Navbar = ({userInfo}) => {
 
                   </div>
                   <div className='nav-right-side'>
-                       <div className='userName'><div className='loggin-in-text'>Logged in as <span style={{color: 'rgb(0, 183, 255)'}}>{userInfo[0].first_name} {userInfo[0].last_name}</span></div></div>
+                       <div className='userName'><div className='login-text'>Logged in as <span style={{color: 'rgb(0, 183, 255)'}}>{userInfo[0].first_name} {userInfo[0].last_name}</span></div></div>
                       <button onClick={() => logout()} className='nav-logout-btn'>
                           Logout
                       </button>
