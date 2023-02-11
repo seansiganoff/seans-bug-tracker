@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
+    flex-wrap: wrap-reverse;
 }
 
 .navbar-container2 {
@@ -139,30 +140,14 @@ a:visited {
     }
     li a {
         font-size: xx-small;
+        padding: 5px;
     }
 
     .nav-logout-btn {
         padding: 5px 15px;
         font-size: xx-small;
     }
-}
 
-@media only screen and (max-width: 900px) {
-    .navbar-container1 {
-        display: grid;
-        padding: 15px 0;
-        justify-content: center;
-    }
-
-    
-
-    .nav-right-side {
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    
     .nav-left-side {
         padding: 0 0 15px 0;        
     }
@@ -170,8 +155,16 @@ a:visited {
     .nav-right-side {
         padding: 5px;
     }
-   
+    .navbar-container1 {
+        padding: 15px 0;
+        justify-content: center;
+    }
+    .nav-right-side {
+        justify-content: center;
+    }
 }
+
+
 
 @media only screen and (max-width: 500px) {
     .nav-left-side select {
