@@ -95,7 +95,7 @@ const Navbar = ({userInfo}) => {
 
   return (
     <div className='navbar'>
-            {isAuth ? VerifiedNav() : VerifiedNav()}
+            {isAuth ? VerifiedNav() : UnverifiedNav()}
     </div>
   )
 }
