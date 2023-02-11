@@ -148,16 +148,14 @@ a:visited {
         font-size: xx-small;
     }
 
-    .nav-left-side {
-        padding: 0 0 15px 0;        
-    }
+    
     
     .nav-right-side {
         padding: 5px;
     }
     .navbar-container1 {
         padding: 15px 0;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .nav-right-side {
         justify-content: center;
