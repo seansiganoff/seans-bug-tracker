@@ -112,7 +112,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 16px;
     font-size: x-small;
@@ -121,12 +121,12 @@ li a {
 
 li a:hover {
     background-color: #989898;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 a:link {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 a:visited {
